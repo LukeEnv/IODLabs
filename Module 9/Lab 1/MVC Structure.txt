@@ -1,0 +1,18 @@
+The Calculator app is set up using a simple MVC structure. Here's how it works:
+
+1. **Model**:
+   - The `Calculator` file in `lib/calculator.js` takes care of all the main calculations like add, subtract, multiply, and divide.
+
+2. **View**:
+   - There’s no front-end for this app. Instead, it sends JSON responses back to the client, which works as the output.
+
+3. **Controller**:
+   - The `calculatorRoutes.js` file is the controller. It sets up the routes and uses the `Calculator` file to handle the logic.
+
+4. **Router**:
+   - The `calculatorRoutes.js` file also acts as the router, making sure the right requests go to the right place.
+
+5. **Entry Point**:
+   - The `index.js` file is where everything starts. It sets up the Express app, connects the routes, and runs the server.
+
+This setup keeps everything organized by separating the logic, routing, and app initialization into their own parts.
