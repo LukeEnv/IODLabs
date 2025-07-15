@@ -1,0 +1,74 @@
+Logical Model:
+
+Entities:
+1. User
+   - user_id (PK)
+   - username
+   - email
+   - password
+   - created_at
+
+2. Post
+   - post_id (PK)
+   - user_id (FK)
+   - title
+   - description
+   - image_url
+   - created_at
+
+3. Like
+   - like_id (PK)
+   - post_id (FK)
+   - user_id (FK)
+   - created_at
+
+4. Comment
+   - comment_id (PK)
+   - post_id (FK)
+   - user_id (FK)
+   - content
+   - created_at
+
+Relationships:
+- Users can create multiple posts (1-to-many).
+- Posts can have many likes (1-to-many).
+- Posts can have many comments (1-to-many).
+- Users can like multiple posts (many-to-many).
+- Users can comment on multiple posts (many-to-many).
+
+Physical Model:
+
+Tables:
+1. users
+   - user_id: INT, PK, AUTO_INCREMENT
+   - username: VARCHAR
+   - email: VARCHAR, UNIQUE
+   - password: VARCHAR
+   - created_at: TIMESTAMP
+
+2. posts
+   - post_id: INT, PK, AUTO_INCREMENT
+   - user_id: INT, FK
+   - title: VARCHAR
+   - description: TEXT
+   - image_url: VARCHAR
+   - created_at: TIMESTAMP
+
+3. likes
+   - like_id: INT, PK, AUTO_INCREMENT
+   - post_id: INT, FK
+   - user_id: INT, FK
+   - created_at: TIMESTAMP
+
+4. comments
+   - comment_id: INT, PK, AUTO_INCREMENT
+   - post_id: INT, FK
+   - user_id: INT, FK
+   - content: TEXT
+   - created_at: TIMESTAMP
+
+Indexes:
+- Add an index on email in the users table for faster lookups.
+- Add an index on user_id in the posts table for efficient queries.
+- Add a composite index on post_id and user_id in the likes table.
+- Add a composite index on post_id and user_id in the comments table.

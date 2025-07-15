@@ -1,0 +1,21 @@
+body {
+  background: #f8f9fa;
+}
+
+.card {
+  transition: box-shadow 0.2s;
+}
+.card:hover {
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.15);
+}
+.category-icon {
+  font-size: 1.2em;
+  margin-right: 0.3em;
+}
+#controls .form-select,
+#controls .form-control {
+  min-width: 150px;
+}
+#products-row {
+  min-height: 200px;
+}

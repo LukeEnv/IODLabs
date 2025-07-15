@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Dice</title>
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="index.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div
+        style="
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        "
+      >
+        <div style="display: flex; align-items: center">
+          <img
+            src="./public/dice.png"
+            width="50px"
+            height="50px"
+            style="padding-right: 20px; padding-top: 5px"
+          />
+          <h1>Exercise 8: The Dice</h1>
+        </div>
+        <p>Select your dice choice below</p>
+
+        <!-- Dice container -->
+        <div class="dice-container">
+          <script>
+            for (let i = 2; i <= 12; i++) {
+              document.write(`
+<div class="dice" id="dice${i}" onclick="rollDice(${i})" onMouseEnter="this.style.backgroundColor='lightblue'" onMouseLeave="this.style.backgroundColor='white'">                  ${i}
+                </div>
+              `);
+            }
+          </script>
+        </div>
+      </div>
+
+      <!-- Modal to show the results -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div
+            style="
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <h2 id="spinningText">Spinning ..</h2>
+            <span class="close" onclick="closeModal()">&times;</span>
+          </div>
+
+          <div
+            style="
+              width: 100%;
+              height: auto;
+              justify-content: center;
+              display: flex;
+              align-items: center;
+              padding-bottom: 20px;
+            "
+          >
+            <div class="diceLarge" id="diceResult"><p id="diceText">2</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script type="module" src="index.js"></script>
+</html>

@@ -1,0 +1,89 @@
+.Sidebar {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 1em;
+  display: relative;
+}
+
+.ContentArea {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+/* height to have same length as the width */
+.pfp {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.Sidebar-Subcontent {
+  margin-top: 20px;
+  background-color: #e0e0e0;
+  border-radius: 0.5em;
+}
+
+.Sidebar-Subcontent-Header {
+  margin-top: 10px;
+  padding-inline: 10px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: #50a2ff;
+  border-start-start-radius: 0.5em;
+  border-start-end-radius: 0.5em;
+  font-weight: bold;
+}
+
+.Sidebar-Subcontent-Content {
+  padding: 10px;
+  border-radius: 0.5em;
+  line-height: 0;
+}
+
+.Sidebar-Subheader {
+  font-weight: bold;
+  font-size: smaller;
+  line-height: 1;
+}
+
+.Sidebar-Subcontent-Content-Item + .Sidebar-Subcontent-Content-Item {
+  margin-top: 30px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 20px);
+  height: calc(100vh - 60px);
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 600px) {
+  .Sidebar {
+    width: 300px;
+  }
+
+  .ContentArea {
+    width: 100%;
+  }
+
+  body {
+    flex-direction: row;
+  }
+}

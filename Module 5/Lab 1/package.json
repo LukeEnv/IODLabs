@@ -1,0 +1,20 @@
+{
+  "name": "multi-server-express-app",
+  "version": "1.0.0",
+  "description": "A basic back-end application with multiple Express servers running on different ports.",
+  "main": "src/server1.ts",
+  "scripts": {
+    "start": "ts-node src/server1.ts & ts-node src/server2.ts",
+    "dev": "ts-node-dev src/server1.ts & ts-node-dev src/server2.ts"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,131 @@
+openapi: 3.0.0
+info:
+  title: Calculator API
+  version: 1.0.0
+  description: API for performing basic calculator operations (add, subtract, multiply, divide) with random ID generation and logging.
+servers:
+  - url: http://localhost:3000
+paths:
+  /calculator/add:
+    get:
+      summary: Add two numbers
+      parameters:
+        - in: query
+          name: num1
+          schema:
+            type: integer
+          required: true
+          description: First number
+        - in: query
+          name: num2
+          schema:
+            type: integer
+          required: true
+          description: Second number
+      responses:
+        '200':
+          description: Sum of two numbers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  result:
+                    type: integer
+  /calculator/subtract:
+    get:
+      summary: Subtract two numbers
+      parameters:
+        - in: query
+          name: num1
+          schema:
+            type: integer
+          required: true
+          description: First number
+        - in: query
+          name: num2
+          schema:
+            type: integer
+          required: true
+          description: Second number
+      responses:
+        '200':
+          description: Difference of two numbers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  result:
+                    type: integer
+  /calculator/multiply:
+    get:
+      summary: Multiply two numbers
+      parameters:
+        - in: query
+          name: num1
+          schema:
+            type: integer
+          required: true
+          description: First number
+        - in: query
+          name: num2
+          schema:
+            type: integer
+          required: true
+          description: Second number
+      responses:
+        '200':
+          description: Product of two numbers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  result:
+                    type: integer
+  /calculator/divide:
+    get:
+      summary: Divide two numbers
+      parameters:
+        - in: query
+          name: num1
+          schema:
+            type: integer
+          required: true
+          description: Numerator
+        - in: query
+          name: num2
+          schema:
+            type: integer
+          required: true
+          description: Denominator
+      responses:
+        '200':
+          description: Quotient of two numbers
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  result:
+                    type: number
+        '400':
+          description: Cannot divide by zero
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  error:
+                    type: string

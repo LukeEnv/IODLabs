@@ -1,0 +1,151 @@
+/* I. Selectors */
+/* Put styles for questions 1.1, 1.2, 1.3 and 1.4 here */
+
+article {
+  margin: 20px;
+  padding: 5px;
+  border: 1px solid black;
+}
+
+.style-me1 {
+  color: red;
+}
+
+#style-me2 {
+  color: blue;
+}
+
+#style-me2.style-me1 {
+  color: purple;
+}
+
+/* Put styles for questions 2.1 and 2.2 here */
+
+.my-descendants-are-styled p {
+  background: red;
+}
+
+.my-children-are-styled > p {
+  background: lightgreen;
+}
+
+/* II. Box model and common properties */
+/* Put styles for questions 1-8 here */
+
+.box {
+  background-color: yellow;
+  margin: 10px 20px 30px 40px;
+  padding: 10px 20px;
+}
+
+.box {
+  width: 100vw !important;
+  height: 50vh !important;
+}
+
+.box {
+  border: 10px solid black;
+}
+
+.box {
+  box-sizing: border-box;
+}
+
+.box {
+  overflow: visible;
+}
+
+.box {
+  outline: 10px solid red;
+}
+
+.box {
+  border-radius: 1em;
+}
+
+.box {
+  background-image: url(../assets/images/img1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* III. Positioning */
+/* Put styles for questions 1-3 here */
+/* For this section, you will be editing the classes for the third article in the given HTML to apply different positioning rules. */
+
+.position-absolute {
+  position: absolute;
+  top: 0;
+  background-color: blueviolet;
+}
+
+.position-relative {
+  position: relative;
+  background-color: orangered;
+}
+
+.position-sticky {
+  position: sticky;
+  background-color: lightgreen;
+  top: 50px;
+}
+
+/* IV. Styling text */
+/* Put styles for questions 1-10 here */
+
+.text-style {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: underline;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+  letter-spacing: 2px;
+  color: red;
+  background-color: lightblue;
+  font-family: "Poppins", sans-serif;
+}
+
+/* V. Styling links */
+/* Put styles for questions 1-3 here */
+
+a,
+a:link {
+  text-decoration: none;
+  color: green;
+  font-size: small;
+  font-weight: bold;
+}
+
+a:hover,
+a:active,
+a:focus {
+  color: darkgreen;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: lightgreen;
+  font-style: italic;
+}
+
+/* VI. calc() */
+/* Put styles for questions 1-3 here */
+
+.calc-style {
+  width: 100vw;
+  background-color: purple;
+  width: calc(100% - 100px);
+}
+
+.fixed-width-col {
+  width: 350px;
+  display: inline-block;
+}
+
+.fluid-col {
+  display: inline-block;
+  width: calc(100% - 350px);
+}

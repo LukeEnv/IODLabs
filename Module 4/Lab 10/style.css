@@ -1,0 +1,28 @@
+body {
+  background: #f8f9fa;
+}
+#controls {
+  margin: 32px auto 24px auto;
+  max-width: 1100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+#searchInput {
+  max-width: 250px;
+}
+#products-row {
+  margin-top: 16px;
+}
+.card-img-top {
+  object-fit: contain;
+  height: 180px;
+  background: #fff;
+}
+.category-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="utf-8" />
+    <meta author="Luke Franklin" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta keywords="HTML, CSS, JavaScript" />
+    <meta description="A simple webpage" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <!-- works like <a href="/index.html">Home</a> -->
+        <a href="/">Home</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>The cool lab</h1>
+      <article>
+        <h2>The article headline</h2>
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+        <span>Web Development</span>
+        <span>Frontend</span>
+        <span>Backend</span>
+
+        <p>p represents paragraph without preserving spacing</p>
+        <pre>
+        Text in         a pre element
+        is displayed in a fixed-width
+        font, and it preserves
+        both      spaces and
+        line breaks
+      </pre
+        >
+
+        <ul>
+          <li>Unordered list item 1</li>
+          <li>Unordered list item 2</li>
+          <li>
+            <ul>
+              <li>Unordered list item 3.1</li>
+              <li>Unordered list item 3.2</li>
+              <li>Unordered list item 3.3</li>
+            </ul>
+          </li>
+        </ul>
+
+        <ol>
+          <li>Ordered list item 1</li>
+          <li>Ordered list item 2</li>
+          <li>Ordered list item 3</li>
+        </ol>
+      </article>
+      <article>
+        <h2>Another article headline</h2>
+        <table>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+          </tr>
+          <tr>
+            <td>Row 1, Cell 1</td>
+            <td>Row 1, Cell 2</td>
+            <td>Row 1, Cell 3</td>
+          </tr>
+          <tr>
+            <td rowspan="2">Row 2, Cell 1</td>
+            <td>Row 2, Cell 2</td>
+            <td>Row 2, Cell 3</td>
+          </tr>
+          <tr>
+            <td>Row 3, Cell 1</td>
+            <td>Row 3, Cell 2</td>
+          </tr>
+        </table>
+      </article>
+      <article>
+        <h2>Yet another article headline</h2>
+        <img
+          src="https://picsum.photos/400/400"
+          alt="Placeholder image"
+          width="200"
+          height="200"
+        />
+        <img
+          src="./assets/html_lab_image.jpg"
+          alt="Description of image in assets"
+        />
+        <video autoplay muted width="250">
+          <source src="./assets/flower.webm" type="video/webm" />
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+        <figure>
+          <audio autoplay controls src="./assets/t-rex-roar.mp3">
+            Your browser does not support the <code>audio</code> element.
+          </audio>
+          <figcaption>Figure caption</figcaption>
+        </figure>
+      </article>
+    </main>
+
+    <a href="/form.html">Form</a>
+
+    <footer>Copyright &copy; 2024</footer>
+  </body>
+</html>

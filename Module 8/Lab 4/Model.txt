@@ -1,0 +1,50 @@
+Logical Model with Redis:
+
+Entities:
+1. User
+   - user_id (PK)
+   - username
+   - email
+   - password
+   - created_at
+
+2. Post
+   - post_id (PK)
+   - user_id (FK)
+   - title
+   - description
+   - image_url
+   - created_at
+
+3. Like
+   - like_id (PK)
+   - post_id (FK)
+   - user_id (FK)
+   - created_at
+
+4. Comment
+   - comment_id (PK)
+   - post_id (FK)
+   - user_id (FK)
+   - content
+   - created_at
+
+5. Redis (Cache)
+   - Stores frequently accessed data such as:
+     - User session data
+     - Popular posts and their like/comment counts
+     - Recently added comments
+
+Data Flow:
+- When a user requests a post, the system first checks Redis for cached data.
+- If the data is not in Redis, it fetches it from the database and stores it in Redis for future requests.
+- Updates to posts, likes, or comments are written to the database and also update the Redis cache.
+
+Diagram Representation:
+
+[User] ---> [Post] ---> [Like] ---> [Comment]
+   |             |             |             |
+   +-----------> [Redis Cache] <------------+
+
+- Arrows indicate data flow between Redis and the database.
+- Redis acts as an intermediary to reduce database load and improve response times.
